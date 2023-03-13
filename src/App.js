@@ -5,7 +5,7 @@ import TodoList from "./TodoList";
 function App() {
   const [todos, setTodos] = useState(() => {
     const save = localStorage.getItem("задачи");
-    const saveValue = JSON.parse(save);
+    const saveValue = JSON.parse(save) || [];
     return saveValue;
   });
   const addTask = (userInput) => {
